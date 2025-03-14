@@ -1,0 +1,9 @@
+node_modules
+node_modules/
+.project
+patterns.conf.merged
+npm-debug.log
+*.tgz
+*.tar.gz
+*.zip
+*.log

@@ -1,0 +1,46 @@
+#compdef sdk
+
+#podpowiadanie
+#_sdk()
+#{
+#    local cmd="${1##*/}"
+#    local cur=${COMP_WORDS[COMP_CWORD]}
+#    local line=${COMP_LINE}
+#    local list_sdk
+#    COMPREPLY=()
+#
+#    _get_comp_words_by_ref -n : cur prev
+#
+#    _expand || return 0
+#
+#    case $prev in
+#        use)
+#        local installed_sdk
+#        installed_sdk=$(echo $(_all_available_versions) | tr '\n' ' ')
+#        COMPREPLY=( $(compgen -W "${installed_sdk}" -- $cur) )
+#            return 0
+#    esac
+#    case $cur in
+#        *)
+#        COMPREPLY=( $(compgen -W "use versions current deactivate onet_segment" -- $cur) )
+#            ;;
+#    esac
+#
+#}
+
+local context state state_descr line
+typeset -A opt_args
+
+_arguments -s -w \
+    "1: :(use versions current deactivate onet_segment)"\
+    "2: :->arg"
+
+case "$state" in
+    arg)
+        case $words[2] in
+            use)
+                _values 'available sdk' "${(uonzf)$(_all_available_versions)}"
+                ;;
+        esac
+        ;;
+esac

@@ -1,0 +1,14 @@
+export GIT_SSH_KEY_PATH="$HOME/.ssh/id_ed25519"
+#eval "$(ssh-agent -s)"
+if [ -z "$SSH_AGENT_PID" ]; then
+    # Jeśli nie, uruchom ssh-agent
+    eval "$(ssh-agent -s)"
+
+    if ! ssh-add -l | grep -q "$GIT_SSH_KEY_PATH"; then
+        ssh-add "$GIT_SSH_KEY_PATH"
+    fi
+else
+    if ! ssh-add -l | grep -q "$GIT_SSH_KEY_PATH"; then
+        ssh-add "$GIT_SSH_KEY_PATH"
+    fi
+fi

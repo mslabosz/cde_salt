@@ -1,0 +1,110 @@
+# ##
+# ## paas
+# ##
+# client access
+[paas-int-client-NAMESPACE_NAME]
+name                    = paas-int-client-NAMESPACE_NAME
+app_id                  = c789b5b4-db32-4a4c-a565-da7567b2aa45
+url                     = https://account.activedirectory.windowsazure.com
+username                = mariusz.slabosz@ringieraxelspringer.pl
+provider                = AzureAD
+mfa                     = Auto
+skip_verify             = false
+timeout                 = 0
+aws_urn                 = urn:amazon:webservices
+aws_session_duration    = 28800
+aws_profile             = paas-int-client-NAMESPACE_NAME
+resource_id             = 
+subdomain               = 
+role_arn                = arn:aws:iam::413397719283:role/dl-NAMESPACE_NAME
+region                  = eu-central-1
+http_attempts_count     = 
+http_retry_delay        = 
+credentials_file        = 
+saml_cache              = false
+saml_cache_file         = 
+target_url              = 
+disable_remember_device = false
+disable_sessions        = false
+prompter                = 
+
+[paas-prod-client-NAMESPACE_NAME]
+name                    = paas-prod-client-NAMESPACE_NAME
+app_id                  = c789b5b4-db32-4a4c-a565-da7567b2aa45
+url                     = https://account.activedirectory.windowsazure.com
+username                = mariusz.slabosz@ringieraxelspringer.pl
+provider                = AzureAD
+mfa                     = Auto
+skip_verify             = false
+timeout                 = 0
+aws_urn                 = urn:amazon:webservices
+aws_session_duration    = 28800
+aws_profile             = paas-prod-client-NAMESPACE_NAME
+resource_id             = 
+subdomain               = 
+role_arn                = arn:aws:iam::435571809706:role/dl-NAMESPACE_NAME
+region                  = eu-central-1
+http_attempts_count     = 
+http_retry_delay        = 
+credentials_file        = 
+saml_cache              = false
+saml_cache_file         = 
+target_url              = 
+disable_remember_device = false
+disable_sessions        = false
+prompter                = 
+
+[paas-prod-client-leopard]
+name                    = paas-prod-client-leopard
+app_id                  = c789b5b4-db32-4a4c-a565-da7567b2aa45
+url                     = https://account.activedirectory.windowsazure.com
+username                = mariusz.slabosz@ringieraxelspringer.pl
+provider                = AzureAD
+mfa                     = Auto
+skip_verify             = false
+timeout                 = 0
+aws_urn                 = urn:amazon:webservices
+aws_session_duration    = 28800
+aws_profile             = paas-prod-client-leopard
+resource_id             = 
+subdomain               = 
+role_arn                = arn:aws:iam::435571809706:role/dl-leopard
+region                  = eu-central-1
+http_attempts_count     = 
+http_retry_delay        = 
+credentials_file        = 
+saml_cache              = false
+saml_cache_file         = 
+target_url              = 
+disable_remember_device = false
+disable_sessions        = false
+prompter                = 
+
+[default]
+name                    = default
+app_id                  = c789b5b4-db32-4a4c-a565-da7567b2aa45
+url                     = https://account.activedirectory.windowsazure.com
+username                = mariusz.slabosz@ringieraxelspringer.pl
+provider                = AzureAD
+mfa                     = Auto
+mfa_ip_address          = 
+skip_verify             = false
+timeout                 = 0
+aws_urn                 = urn:amazon:webservices
+aws_session_duration    = 28000
+aws_profile             = default
+resource_id             = 
+subdomain               = 
+role_arn                = 
+region                  = 
+http_attempts_count     = 
+http_retry_delay        = 
+credentials_file        = 
+saml_cache              = false
+saml_cache_file         = 
+target_url              = 
+disable_remember_device = false
+disable_sessions        = false
+download_browser_driver = false
+headless                = false
+prompter                = 

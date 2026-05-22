@@ -71,7 +71,7 @@ awsrequired:
 
 azzurelogin:
   cmd.run:
-    - name: 'export PATH="/opt/sdk/node_v14/bin/:$PATH"; npm install -g aws-azure-login --unsafe-perm'
+    - name: 'export PATH="/opt/sdk/node_v22/bin/:$PATH"; npm install -g aws-azure-login --unsafe-perm'
 
 {% if login != 'notsetuname' %}
 
